@@ -6,15 +6,19 @@
 #include <thread>
 #include <chrono>
 
-#define sleep this_thread::sleep_for(std::chrono::milliseconds(138));
+//#define sleep this_thread::sleep_for(std::chrono::milliseconds(138));
 
 using namespace std;
 
-/*
+
 void sleep(const int milliseconds){
         this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
 }
-*/
+
+
+void main_menu(){
+    cout << "1. "
+}
 
 int main(){
 
@@ -39,9 +43,12 @@ int main(){
 
     for (int i = 0; i < label_rows; i++){
         cout << label[i] << endl;
-        sleep
+        sleep(138);
     }
-         
+    cout << endl;
+    sleep(1000);
+
+    main_menu();
          
 
     return 0;
