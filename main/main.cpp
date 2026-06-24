@@ -2,25 +2,45 @@
 #include <cstdlib>
 #include <string>
 #include <fstream>
+#include <string>
+#include <thread>
+#include <chrono>
 
+#define sleep this_thread::sleep_for(std::chrono::milliseconds(138));
 
 using namespace std;
 
+/*
+void sleep(const int milliseconds){
+        this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
+}
+*/
+
 int main(){
 
-    cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl
-         << "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-" << endl
-         << "-|                               |-" << endl;
-    cout << "|-    V            CCCCVC        -|" << endl
-         << "-|     V         CC  V   CC      |-" << endl
-         << "|-      V       CC  V      C     -|" << endl
-         << "-|       V     C   V             |-" << endl
-         << "|-        V    C  V              -|" << endl
-         << "-|         V   C V               |-" << endl
-         << "|-          V   VC         C     -|" << endl
-         << "-|           V V CC      CC      |-" << endl
-         << "|-            V    CCCCCC        -|" << endl;
-    cout << "-|                               |-" << endl
+    const int label_rows = 17;
+    string label[label_rows] = {
+        "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=",
+        "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-",
+        "-|                               |-",
+        "|-    V            CCCCVC        -|",
+        "-|     V         CC  V   CC      |-",
+        "|-      V       CC  V      C     -|",
+        "-|       V     C   V             |-",
+        "|-        V    C  V              -|",
+        "-|         V   C V               |-",
+        "|-          V   VC         C     -|",
+        "-|           V V CC      CC      |-",
+        "|-            V    CCCCCC        -|",
+        "-|                               |-",
+        "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=",
+        "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-"
+    };
+
+    for (int i = 0; i < label_rows; i++){
+        cout << label[i] << endl;
+        sleep
+    }
          
          
 
