@@ -17,7 +17,7 @@ void sleep(const int milliseconds){
 
 
 void main_menu(){
-    cout << "1.     "
+    cout << "1.     ";
 }
 
 int main(){
