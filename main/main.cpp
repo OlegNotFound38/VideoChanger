@@ -17,7 +17,14 @@ void sleep(const int milliseconds){
 
 
 void main_menu(){
-    cout << "1.     ";
+    cout << "1. Trim a video" << endl
+         << "2. Quit" << endl;
+
+    short user_callback; cin >> user_callback;
+    if (user_callback == 1) trim_video();
+    else if (user_callback == 2){
+        cout << "Good luck!";
+    }
 }
 
 int main(){
@@ -49,7 +56,6 @@ int main(){
     sleep(1000);
 
     main_menu();
-         
 
     return 0;
 }
