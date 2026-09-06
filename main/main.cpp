@@ -5,11 +5,14 @@
 #include <string>
 #include <thread>
 #include <chrono>
+#include <filesystem>
 
 //#define sleep this_thread::sleep_for(std::chrono::milliseconds(138));
 
 using namespace std;
 
+void main_menu();
+void trim_video();
 
 void sleep(const int milliseconds){
         this_thread::sleep_for(std::chrono::milliseconds(milliseconds));
@@ -26,13 +29,47 @@ void trim_video(){
     cout << "1. Trim the beginning" << endl;
     sleep(80);
     cout << "2. Trim the end" << endl;
+    sleep(80);
+    cout << "3. Trim the part" << endl;
     sleep (120);
-    cout << "3. Back to main menu";
+    cout << "4. Back to main menu";
 
     short u_cb; cin >> u_cb;
-    if (u_cb == 1) u_cb = 1; //trim_begin();
-    else if (u_cb == 2) u_cb = 2; //trim_end();
-    else if (u_cb == 3) main_menu();     
+    if (u_cb == 4) main_menu();
+    else{
+        cout << "Enter the full video path";
+        string video_path; cin >> video_path;
+        cout << "How to named video?" << endl;
+        string video_name; cin >> video_name;
+
+        /*short hours, min, sec,
+            end_h, end_m, end_s;*/
+        string start_time, end_time;
+
+        if (u_cb == 3){
+            cout << "Enter the beginning time in format (HH:MM:SS)"; cin >> start_time;
+            cout << "Enter the end time in format (HH:MM:SS)"; cin >> end_time;
+
+            /*
+            cout << "Enter the beginning...";
+            cout << endl << "Hour: "; cin >> hours;
+            cout << endl << "Minute: "; cin >> min;
+            cout << endl << "Second: "; cin >> sec;
+
+            cout << endl << "Enter the end...";
+            
+            cout << endl << "Hour: "; cin >> end_h;
+            cout << endl << "Minute: "; cin >> end_m;
+            cout << endl << "Second: "; cin >> end_s;
+            cout << endl;
+            */    
+        }
+
+        
+
+
+
+    }    
 }
 
 
