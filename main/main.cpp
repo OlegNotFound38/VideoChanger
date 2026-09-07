@@ -45,10 +45,9 @@ void trim_video(){
         /*short hours, min, sec,
             end_h, end_m, end_s;*/
         string start_time, end_time;
-
         if (u_cb == 3){
-            cout << "Enter the beginning time in format (HH:MM:SS)"; cin >> start_time;
-            cout << "Enter the end time in format (HH:MM:SS)"; cin >> end_time;
+            cout << "Enter the beginning time in format (HH:MM:SS)" << endl; cin >> start_time;
+            cout << "Enter the end time in format (HH:MM:SS)" << endl; cin >> end_time;
 
             /*
             cout << "Enter the beginning...";
@@ -63,6 +62,14 @@ void trim_video(){
             cout << endl << "Second: "; cin >> end_s;
             cout << endl;
             */    
+        }
+        else{
+            cout << "Enter what time you want to leave in format (HH:MM:SS)" << endl;
+            if (u_cb == 2){
+                start_time = "00:00:00";
+                cin >> end_time;
+            }
+            
         }
 
         
