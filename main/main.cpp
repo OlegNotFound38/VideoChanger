@@ -64,12 +64,16 @@ void trim_video(){
             */    
         }
         else{
-            cout << "Enter what time you want to leave in format (HH:MM:SS)" << endl;
+            cout << "Enter how mach you want new video. Format (HH:MM:SS)" << endl;
             if (u_cb == 2){
                 start_time = "00:00:00";
                 cin >> end_time;
             }
-            
+            else{
+                cout << "How long old video go? (HH:MM:SS)" << endl; cin >> end_time;
+                cout << "Enter, last time, what you want to stay (HH:MM:SS)" << endl;
+                
+            }
         }
 
         
